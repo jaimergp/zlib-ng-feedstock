@@ -21,30 +21,57 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - CONFIG: linux_64_
-            SHORT_CONFIG: linux_64_
+          - CONFIG: linux_64_compat0
+            SHORT_CONFIG: linux_64_compat0
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-          - CONFIG: linux_aarch64_
-            SHORT_CONFIG: linux_aarch64_
+          - CONFIG: linux_64_compat1
+            SHORT_CONFIG: linux_64_compat1
+            UPLOAD_PACKAGES: True
+            os: ubuntu
+            runs_on: ['ubuntu-latest']
+            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+          - CONFIG: linux_aarch64_compat0
+            SHORT_CONFIG: linux_aarch64_compat0
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-24.04-arm']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma9
-          - CONFIG: osx_64_
-            SHORT_CONFIG: osx_64_
+          - CONFIG: linux_aarch64_compat1
+            SHORT_CONFIG: linux_aarch64_compat1
+            UPLOAD_PACKAGES: True
+            os: ubuntu
+            runs_on: ['ubuntu-24.04-arm']
+            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma9
+          - CONFIG: osx_64_compat0
+            SHORT_CONFIG: osx_64_compat0
             UPLOAD_PACKAGES: True
             os: macos
             runs_on: ['macos-13']
-          - CONFIG: osx_arm64_
-            SHORT_CONFIG: osx_arm64_
+          - CONFIG: osx_64_compat1
+            SHORT_CONFIG: osx_64_compat1
+            UPLOAD_PACKAGES: True
+            os: macos
+            runs_on: ['macos-13']
+          - CONFIG: osx_arm64_compat0
+            SHORT_CONFIG: osx_arm64_compat0
             UPLOAD_PACKAGES: True
             os: macos
             runs_on: ['macos-15']
-          - CONFIG: win_64_
-            SHORT_CONFIG: win_64_
+          - CONFIG: osx_arm64_compat1
+            SHORT_CONFIG: osx_arm64_compat1
+            UPLOAD_PACKAGES: True
+            os: macos
+            runs_on: ['macos-15']
+          - CONFIG: win_64_compat0
+            SHORT_CONFIG: win_64_compat0
+            UPLOAD_PACKAGES: True
+            os: windows
+            runs_on: ['windows-latest']
+          - CONFIG: win_64_compat1
+            SHORT_CONFIG: win_64_compat1
             UPLOAD_PACKAGES: True
             os: windows
             runs_on: ['windows-latest']

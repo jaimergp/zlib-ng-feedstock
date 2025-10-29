@@ -14,6 +14,8 @@ channel_sources:
 - conda-forge
 channel_targets:
 - jaimergp zlib-ng-compat
+compat:
+- '1'
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
@@ -25,5 +27,3 @@ target_platform:
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
-zlib:
-- '1'

@@ -6,9 +6,9 @@ channel_sources:
 - conda-forge
 channel_targets:
 - jaimergp zlib-ng-compat
+compat:
+- '0'
 cxx_compiler:
 - vs2022
 target_platform:
 - win-64
-zlib:
-- '1'
